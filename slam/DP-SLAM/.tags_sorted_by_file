@@ -1,0 +1,282 @@
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.5	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+CC	trunk/Makefile	/^CC = g++$/;"	m
+CFLAGS	trunk/Makefile	/^CFLAGS = -g -I. -O3 -Wall -I\/usr\/local\/lib\/g++-include$/;"	m
+LDFLAGS	trunk/Makefile	/^LDFLAGS = -lpthread$/;"	m
+SRC	trunk/Makefile	/^SRC = mt-rand.o ThisRobot.o basic.o map.o lowMap.o low.o highMap.o high.o slam.o$/;"	m
+ConnectDrive	trunk/ThisRobot.cpp	/^int ConnectDrive(int argc, char *argv[]) {$/;"	f
+ConnectLaser	trunk/ThisRobot.cpp	/^int ConnectLaser(int argc, char *argv[]) {$/;"	f
+ConnectOdometry	trunk/ThisRobot.cpp	/^int ConnectOdometry(int argc, char *argv[]) {$/;"	f
+Drive	trunk/ThisRobot.cpp	/^void Drive(double speed, double turn) {$/;"	f
+GetOdometry	trunk/ThisRobot.cpp	/^void GetOdometry(TOdo &odometry) {$/;"	f
+GetSensation	trunk/ThisRobot.cpp	/^void GetSensation(TSense &sense) {$/;"	f
+InitializeThisRobot	trunk/ThisRobot.cpp	/^int InitializeThisRobot(int argc, char *argv[]) {$/;"	f
+odometry	trunk/ThisRobot.cpp	/^TOdo odometry;$/;"	v
+SENSE_NUMBER	trunk/ThisRobot.h	25;"	d
+TOdo	trunk/ThisRobot.h	/^typedef struct odo_struct TOdo;$/;"	t
+TSense	trunk/ThisRobot.h	/^typedef TSenseSample TSense[SENSE_NUMBER+1];$/;"	t
+TSenseSample	trunk/ThisRobot.h	/^typedef struct TSense_struct TSenseSample;$/;"	t
+TSense_struct	trunk/ThisRobot.h	/^struct TSense_struct{$/;"	s
+TURN_RADIUS	trunk/ThisRobot.h	29;"	d
+distance	trunk/ThisRobot.h	/^  double theta, distance;$/;"	m	struct:TSense_struct
+odo_struct	trunk/ThisRobot.h	/^struct odo_struct{$/;"	s
+theta	trunk/ThisRobot.h	/^  double theta, distance;$/;"	m	struct:TSense_struct
+theta	trunk/ThisRobot.h	/^  double x, y, theta;$/;"	m	struct:odo_struct
+x	trunk/ThisRobot.h	/^  double x, y, theta;$/;"	m	struct:odo_struct
+y	trunk/ThisRobot.h	/^  double x, y, theta;$/;"	m	struct:odo_struct
+PLAYBACK	trunk/basic.c	/^char *PLAYBACK, *RECORDING;$/;"	v
+RECORDING	trunk/basic.c	/^char *PLAYBACK, *RECORDING;$/;"	v
+MAX	trunk/basic.cpp	12;"	d	file:
+MAX_SENSE_RANGE	trunk/basic.cpp	7;"	d	file:
+MIN	trunk/basic.cpp	13;"	d	file:
+SIGN	trunk/basic.cpp	10;"	d	file:
+SQUARE	trunk/basic.cpp	11;"	d	file:
+FALSE	trunk/basic.h	39;"	d
+GAUSSIAN	trunk/basic.h	37;"	d
+MAP_SCALE	trunk/basic.h	28;"	d
+MAX	trunk/basic.h	33;"	d
+MIN	trunk/basic.h	34;"	d
+SIGN	trunk/basic.h	31;"	d
+SQUARE	trunk/basic.h	32;"	d
+TRUE	trunk/basic.h	40;"	d
+CloseHighSlam	trunk/high.c	/^void CloseHighSlam()$/;"	f
+H_THRESH	trunk/high.c	27;"	d	file:
+H_VIDEO	trunk/high.c	/^int H_VIDEO = 1;$/;"	v
+HighAddToWorldModel	trunk/high.c	/^void HighAddToWorldModel(TPath *sourcePath, TSenseLog *sourceObs, int maxID)$/;"	f
+HighLocalize	trunk/high.c	/^void HighLocalize(TPath *path, TSenseLog *obs)$/;"	f
+HighPrintMap	trunk/high.c	/^void HighPrintMap(char *name, TAncestor *parent)$/;"	f
+HighSlam	trunk/high.c	/^void HighSlam(TPath *path, TSenseLog *obs)$/;"	f
+HighUpdateAncestry	trunk/high.c	/^void HighUpdateAncestry(TPath *path, TSenseLog *obs)$/;"	f
+InitHighSlam	trunk/high.c	/^void InitHighSlam()$/;"	f
+LogScorePosition	trunk/high.c	/^double LogScorePosition(double x, double y, double theta, int parent, TSense sense)$/;"	f
+MAX_TRACE_ERROR	trunk/high.c	33;"	d	file:
+PASSES	trunk/high.c	30;"	d	file:
+TSample	trunk/high.c	/^typedef struct TSample_struct TSample;$/;"	t	file:
+TSample_struct	trunk/high.c	/^struct TSample_struct {$/;"	s	file:
+WORST_POSSIBLE	trunk/high.c	34;"	d	file:
+h_availableID	trunk/high.c	/^int h_availableID[H_ID_NUMBER];$/;"	v
+h_children	trunk/high.c	/^int h_children[H_PARTICLE_NUMBER];$/;"	v
+h_cleanID	trunk/high.c	/^int h_cleanID;$/;"	v
+h_curGeneration	trunk/high.c	/^int h_curGeneration;$/;"	v
+h_cur_saved_particles_used	trunk/high.c	/^int h_cur_saved_particles_used;$/;"	v
+h_map	trunk/high.c	/^unsigned char h_map[H_MAP_WIDTH][H_MAP_HEIGHT];$/;"	v
+h_savedParticle	trunk/high.c	/^TParticle h_savedParticle[H_PARTICLE_NUMBER];$/;"	v
+parent	trunk/high.c	/^  int    parent;$/;"	m	struct:TSample_struct	file:
+probability	trunk/high.c	/^  double probability;$/;"	m	struct:TSample_struct	file:
+tG	trunk/high.c	/^  float x, y, theta, xG, yG, tG;$/;"	m	struct:TSample_struct	file:
+theta	trunk/high.c	/^  float x, y, theta, xG, yG, tG;$/;"	m	struct:TSample_struct	file:
+x	trunk/high.c	/^  float x, y, theta, xG, yG, tG;$/;"	m	struct:TSample_struct	file:
+xG	trunk/high.c	/^  float x, y, theta, xG, yG, tG;$/;"	m	struct:TSample_struct	file:
+y	trunk/high.c	/^  float x, y, theta, xG, yG, tG;$/;"	m	struct:TSample_struct	file:
+yG	trunk/high.c	/^  float x, y, theta, xG, yG, tG;$/;"	m	struct:TSample_struct	file:
+AddToWorkingArray	trunk/highMap.c	/^static void AddToWorkingArray(int i, TMapStarter *node, short int workingArray[]) $/;"	f	file:
+H_PRIOR	trunk/highMap.c	35;"	d	file:
+H_PRIOR_DIST	trunk/highMap.c	34;"	d	file:
+HighAddTrace	trunk/highMap.c	/^void HighAddTrace(double startx, double starty, double MeasuredDist, double theta, TAncestor *parent, int addEnd) {$/;"	f
+HighBuildObservation	trunk/highMap.c	/^inline void HighBuildObservation(int x, int y, char usage)$/;"	f
+HighComputeProb	trunk/highMap.c	/^double HighComputeProb(int x, int y, double distance, int ID) $/;"	f
+HighComputeProbability	trunk/highMap.c	/^inline double HighComputeProbability(int x, int y, double distance, int parentID) $/;"	f
+HighDeleteObservation	trunk/highMap.c	/^void HighDeleteObservation(short int x, short int y, short int node) {$/;"	f
+HighDestroyMap	trunk/highMap.c	/^void HighDestroyMap()$/;"	f
+HighInitializeFlags	trunk/highMap.c	/^void HighInitializeFlags()$/;"	f
+HighInitializeWorldMap	trunk/highMap.c	/^void HighInitializeWorldMap()$/;"	f
+HighLineTrace	trunk/highMap.c	/^double HighLineTrace(double startx, double starty, double theta, double MeasuredDist, int parentID) {$/;"	f
+HighResizeArray	trunk/highMap.c	/^void HighResizeArray(TMapStarter *node, int deadID)$/;"	f
+HighUpdateGridSquare	trunk/highMap.c	/^void HighUpdateGridSquare(int x, int y, double distance, int hit, int parentID)$/;"	f
+h_cur_particles_used	trunk/highMap.c	/^int h_cur_particles_used;$/;"	v
+h_particle	trunk/highMap.c	/^TParticle h_particle[H_PARTICLE_NUMBER];$/;"	v
+h_particleID	trunk/highMap.c	/^TAncestor h_particleID[H_ID_NUMBER];$/;"	v
+highMap	trunk/highMap.c	/^PMapStarter highMap[H_MAP_WIDTH][H_MAP_HEIGHT];$/;"	v
+HIGH_VARIANCE	trunk/laser.h	33;"	d
+LOW_VARIANCE	trunk/laser.h	32;"	d
+MAX_SENSE_RANGE	trunk/laser.h	37;"	d
+AddToWorldModel	trunk/low.c	/^void AddToWorldModel(TSense sense, int particleNum) {$/;"	f
+C	trunk/low.c	/^  double C, D, T;$/;"	m	struct:THold	file:
+C	trunk/low.c	/^  double C, D, T;$/;"	m	struct:TSample_struct	file:
+CheckScore	trunk/low.c	/^inline double CheckScore(TSense sense, int index, int sampleNum) $/;"	f
+CloseLowSlam	trunk/low.c	/^void CloseLowSlam()$/;"	f
+D	trunk/low.c	/^  double C, D, T;$/;"	m	struct:THold	file:
+D	trunk/low.c	/^  double C, D, T;$/;"	m	struct:TSample_struct	file:
+DisposeAncestry	trunk/low.c	/^void DisposeAncestry(TAncestor particleID[]) $/;"	f
+FILE_FORMAT	trunk/low.c	/^int FILE_FORMAT;$/;"	v
+InitLowSlam	trunk/low.c	/^void InitLowSlam()$/;"	f
+LOG	trunk/low.c	68;"	d	file:
+L_VIDEO	trunk/low.c	/^int L_VIDEO = 0;$/;"	v
+Localize	trunk/low.c	/^void Localize(TSense sense)$/;"	f
+LowSlam	trunk/low.c	/^void LowSlam(int &continueSlam, TPath **path, TSenseLog **obs)$/;"	f
+MAX_TRACE_ERROR	trunk/low.c	63;"	d	file:
+PASSES	trunk/low.c	58;"	d	file:
+PrintMap	trunk/low.c	/^void PrintMap(char *name, TAncestor *parent, int particles, double overlayX, double overlayY, double overlayTheta)$/;"	f
+QuickScore	trunk/low.c	/^inline double QuickScore(TSense sense, int index, int sampleNum) $/;"	f
+REC	trunk/low.c	69;"	d	file:
+ReadLog	trunk/low.c	/^int ReadLog(FILE *logFile, TSense &sense, int &continueSlam) {$/;"	f
+T	trunk/low.c	/^  double C, D, T;$/;"	m	struct:THold	file:
+T	trunk/low.c	/^  double C, D, T;$/;"	m	struct:TSample_struct	file:
+THRESH	trunk/low.c	55;"	d	file:
+THold	trunk/low.c	/^struct THold {$/;"	s	file:
+TSample	trunk/low.c	/^typedef struct TSample_struct TSample;$/;"	t	file:
+TSample_struct	trunk/low.c	/^struct TSample_struct {$/;"	s	file:
+UpdateAncestry	trunk/low.c	/^void UpdateAncestry(TSense sense, TAncestor particleID[])$/;"	f
+WORST_POSSIBLE	trunk/low.c	65;"	d	file:
+availableID	trunk/low.c	/^int availableID[ID_NUMBER];$/;"	v
+children	trunk/low.c	/^int children[PARTICLE_NUMBER];$/;"	v
+cleanID	trunk/low.c	/^int cleanID;$/;"	v
+curGeneration	trunk/low.c	/^int curGeneration;$/;"	v
+cur_saved_particles_used	trunk/low.c	/^int cur_saved_particles_used;$/;"	v
+hold	trunk/low.c	/^THold hold[LOW_DURATION];$/;"	v
+lastTheta	trunk/low.c	/^double lastX, lastY, lastTheta;$/;"	v
+lastX	trunk/low.c	/^double lastX, lastY, lastTheta;$/;"	v
+lastY	trunk/low.c	/^double lastX, lastY, lastTheta;$/;"	v
+map	trunk/low.c	/^unsigned char map[MAP_WIDTH][MAP_HEIGHT];$/;"	v
+meanC_D	trunk/low.c	38;"	d	file:
+meanC_T	trunk/low.c	39;"	d	file:
+meanD_D	trunk/low.c	43;"	d	file:
+meanD_T	trunk/low.c	44;"	d	file:
+meanT_D	trunk/low.c	48;"	d	file:
+meanT_T	trunk/low.c	49;"	d	file:
+newSample	trunk/low.c	/^TSample newSample[SAMPLE_NUMBER];$/;"	v
+parent	trunk/low.c	/^  int parent;$/;"	m	struct:TSample_struct	file:
+probability	trunk/low.c	/^  double probability;$/;"	m	struct:TSample_struct	file:
+readFile	trunk/low.c	/^FILE *readFile;$/;"	v
+savedParticle	trunk/low.c	/^TParticle savedParticle[PARTICLE_NUMBER];$/;"	v
+sense	trunk/low.c	/^  TSense sense;$/;"	m	struct:THold	file:
+sense	trunk/low.c	/^TSense sense;$/;"	v
+theta	trunk/low.c	/^  double x, y, theta; $/;"	m	struct:TSample_struct	file:
+varC_D	trunk/low.c	40;"	d	file:
+varC_T	trunk/low.c	41;"	d	file:
+varD_D	trunk/low.c	45;"	d	file:
+varD_T	trunk/low.c	46;"	d	file:
+varT_D	trunk/low.c	50;"	d	file:
+varT_T	trunk/low.c	51;"	d	file:
+x	trunk/low.c	/^  double x, y, theta; $/;"	m	struct:TSample_struct	file:
+y	trunk/low.c	/^  double x, y, theta; $/;"	m	struct:TSample_struct	file:
+LOW_DURATION	trunk/low.h	27;"	d
+AddToWorkingArray	trunk/lowMap.c	/^static void AddToWorkingArray(int i, TMapStarter *node, short int workingArray[]) $/;"	f	file:
+FLAG	trunk/lowMap.c	/^int FLAG;$/;"	v
+L_PRIOR	trunk/lowMap.c	34;"	d	file:
+L_PRIOR_DIST	trunk/lowMap.c	37;"	d	file:
+LowAddTrace	trunk/lowMap.c	/^void LowAddTrace(double startx, double starty, double MeasuredDist, double theta, int parentID, int addEnd) {$/;"	f
+LowBuildObservation	trunk/lowMap.c	/^inline void LowBuildObservation(int x, int y, char usage)$/;"	f
+LowComputeProb	trunk/lowMap.c	/^double LowComputeProb(int x, int y, double distance, int ID) $/;"	f
+LowComputeProbability	trunk/lowMap.c	/^inline double LowComputeProbability(int x, int y, double distance, int parentID) $/;"	f
+LowDeleteObservation	trunk/lowMap.c	/^void LowDeleteObservation(short int x, short int y, short int node) {$/;"	f
+LowDestroyMap	trunk/lowMap.c	/^void LowDestroyMap()$/;"	f
+LowInitializeFlags	trunk/lowMap.c	/^void LowInitializeFlags()$/;"	f
+LowInitializeWorldMap	trunk/lowMap.c	/^void LowInitializeWorldMap()$/;"	f
+LowLineTrace	trunk/lowMap.c	/^double LowLineTrace(double startx, double starty, double theta, double MeasuredDist, int parentID, float culling) {$/;"	f
+LowResizeArray	trunk/lowMap.c	/^void LowResizeArray(TMapStarter *node, int deadID)$/;"	f
+LowUpdateGridSquare	trunk/lowMap.c	/^void LowUpdateGridSquare(int x, int y, double distance, int hit, int parentID)$/;"	f
+l_cur_particles_used	trunk/lowMap.c	/^int l_cur_particles_used;$/;"	v
+l_particle	trunk/lowMap.c	/^TParticle l_particle[PARTICLE_NUMBER];$/;"	v
+l_particleID	trunk/lowMap.c	/^TAncestor l_particleID[ID_NUMBER];$/;"	v
+lowMap	trunk/lowMap.c	/^PMapStarter lowMap[MAP_WIDTH][MAP_HEIGHT];$/;"	v
+flagMap	trunk/map.c	/^int flagMap[H_MAP_WIDTH][H_MAP_HEIGHT];$/;"	v
+obsX	trunk/map.c	/^short int obsX[AREA], obsY[AREA];$/;"	v
+obsY	trunk/map.c	/^short int obsX[AREA], obsY[AREA];$/;"	v
+observationArray	trunk/map.c	/^short int observationArray[AREA][TOP_ID_NUMBER];$/;"	v
+observationID	trunk/map.c	/^int observationID;$/;"	v
+AREA	trunk/map.h	82;"	d
+C	trunk/map.h	/^  float C, D, T;  \/\/ Minor and major axis of motion, and change of facing, respectively$/;"	m	struct:TParticle_struct
+C	trunk/map.h	/^  float C, D, T;$/;"	m	struct:TPath_struct
+D	trunk/map.h	/^  float C, D, T;  \/\/ Minor and major axis of motion, and change of facing, respectively$/;"	m	struct:TParticle_struct
+D	trunk/map.h	/^  float C, D, T;$/;"	m	struct:TPath_struct
+H_ID_NUMBER	trunk/map.h	68;"	d
+H_MAP_HEIGHT	trunk/map.h	59;"	d
+H_MAP_WIDTH	trunk/map.h	58;"	d
+H_PARTICLE_NUMBER	trunk/map.h	62;"	d
+H_SAMPLE_NUMBER	trunk/map.h	64;"	d
+ID	trunk/map.h	/^  short int ID;$/;"	m	struct:MapNode_struct
+ID	trunk/map.h	/^  short int generation, ID, numChildren;$/;"	m	struct:TAncestor_struct
+ID_NUMBER	trunk/map.h	50;"	d
+MAP_HEIGHT	trunk/map.h	36;"	d
+MAP_WIDTH	trunk/map.h	35;"	d
+MapNodeStarter_struct	trunk/map.h	/^struct MapNodeStarter_struct {$/;"	s
+MapNode_struct	trunk/map.h	/^struct MapNode_struct {$/;"	s
+PARTICLE_NUMBER	trunk/map.h	39;"	d
+PAncestor	trunk/map.h	/^typedef struct TAncestor_struct *PAncestor;$/;"	t
+PMapNode	trunk/map.h	/^typedef struct MapNode_struct *PMapNode;$/;"	t
+PMapStarter	trunk/map.h	/^typedef struct MapNodeStarter_struct *PMapStarter;$/;"	t
+SAMPLE_NUMBER	trunk/map.h	45;"	d
+START_ITERATION	trunk/map.h	27;"	d
+T	trunk/map.h	/^  float C, D, T;  \/\/ Minor and major axis of motion, and change of facing, respectively$/;"	m	struct:TParticle_struct
+T	trunk/map.h	/^  float C, D, T;$/;"	m	struct:TPath_struct
+TAncestor	trunk/map.h	/^typedef struct TAncestor_struct TAncestor;$/;"	t
+TAncestor_struct	trunk/map.h	/^struct TAncestor_struct {$/;"	s
+TEntryList	trunk/map.h	/^typedef struct TEntryList_struct TEntryList;$/;"	t
+TEntryList_struct	trunk/map.h	/^struct TEntryList_struct {$/;"	s
+TMapNode	trunk/map.h	/^typedef struct MapNode_struct TMapNode;$/;"	t
+TMapStarter	trunk/map.h	/^typedef struct MapNodeStarter_struct TMapStarter;$/;"	t
+TOP_ID_NUMBER	trunk/map.h	73;"	d
+TOP_ID_NUMBER	trunk/map.h	75;"	d
+TParticle	trunk/map.h	/^typedef struct TParticle_struct TParticle;$/;"	t
+TParticle_struct	trunk/map.h	/^struct TParticle_struct {$/;"	s
+TPath	trunk/map.h	/^typedef struct TPath_struct TPath;$/;"	t
+TPath_struct	trunk/map.h	/^struct TPath_struct {$/;"	s
+TSenseLog	trunk/map.h	/^typedef struct TSenseLog_struct TSenseLog;$/;"	t
+TSenseLog_struct	trunk/map.h	/^struct TSenseLog_struct {$/;"	s
+UNKNOWN	trunk/map.h	23;"	d
+ancestryNode	trunk/map.h	/^  TAncestor_struct *ancestryNode; $/;"	m	struct:TParticle_struct
+array	trunk/map.h	/^  PMapNode array;$/;"	m	struct:MapNodeStarter_struct
+dead	trunk/map.h	/^  short int total, size, dead;$/;"	m	struct:MapNodeStarter_struct
+distance	trunk/map.h	/^  float distance;$/;"	m	struct:MapNode_struct
+generation	trunk/map.h	/^  short int generation, ID, numChildren;$/;"	m	struct:TAncestor_struct
+hits	trunk/map.h	/^  short int hits;$/;"	m	struct:MapNode_struct
+mapEntries	trunk/map.h	/^  TEntryList *mapEntries;$/;"	m	struct:TAncestor_struct
+next	trunk/map.h	/^  struct TPath_struct *next;$/;"	m	struct:TPath_struct
+next	trunk/map.h	/^  struct TSenseLog_struct *next;$/;"	m	struct:TSenseLog_struct
+node	trunk/map.h	/^  short int node;$/;"	m	struct:TEntryList_struct
+numChildren	trunk/map.h	/^  short int generation, ID, numChildren;$/;"	m	struct:TAncestor_struct
+parent	trunk/map.h	/^  struct TAncestor_struct *parent;$/;"	m	struct:TAncestor_struct
+parentGen	trunk/map.h	/^  short int parentGen;$/;"	m	struct:MapNode_struct
+path	trunk/map.h	/^  TPath *path;  \/\/ An addition for hierarchical- maintains the partial robot path represented by this particle$/;"	m	struct:TAncestor_struct
+probability	trunk/map.h	/^  double probability; \/\/ The proability of the particle$/;"	m	struct:TParticle_struct
+seen	trunk/map.h	/^  char seen;  \/\/ Used by various functions for speedy traversal of the tree. $/;"	m	struct:TAncestor_struct
+sense	trunk/map.h	/^  TSense sense;$/;"	m	struct:TSenseLog_struct
+size	trunk/map.h	/^  int size, total;$/;"	m	struct:TAncestor_struct
+size	trunk/map.h	/^  short int total, size, dead;$/;"	m	struct:MapNodeStarter_struct
+source	trunk/map.h	/^  int source;$/;"	m	struct:MapNode_struct
+theta	trunk/map.h	/^  float x, y, theta; \/\/ The current position of the particle, in terms of grid squares and radians$/;"	m	struct:TParticle_struct
+total	trunk/map.h	/^  int size, total;$/;"	m	struct:TAncestor_struct
+total	trunk/map.h	/^  short int total, size, dead;$/;"	m	struct:MapNodeStarter_struct
+x	trunk/map.h	/^  float x, y, theta; \/\/ The current position of the particle, in terms of grid squares and radians$/;"	m	struct:TParticle_struct
+x	trunk/map.h	/^  short int x, y;$/;"	m	struct:TEntryList_struct
+y	trunk/map.h	/^  float x, y, theta; \/\/ The current position of the particle, in terms of grid squares and radians$/;"	m	struct:TParticle_struct
+y	trunk/map.h	/^  short int x, y;$/;"	m	struct:TEntryList_struct
+DM	trunk/mt-rand.c	197;"	d	file:
+K	trunk/mt-rand.c	71;"	d	file:
+M	trunk/mt-rand.c	70;"	d	file:
+MAX	trunk/mt-rand.c	196;"	d	file:
+MTrandDec	trunk/mt-rand.c	/^double MTrandDec(void) {$/;"	f
+MTrandInt	trunk/mt-rand.c	/^int MTrandInt(int max) {$/;"	f
+N	trunk/mt-rand.c	69;"	d	file:
+dummyInit	trunk/mt-rand.c	/^void dummyInit(long i) {$/;"	f
+hiBit	trunk/mt-rand.c	72;"	d	file:
+left	trunk/mt-rand.c	/^static int      left = -1;   \/* can *next++ this many times before reloading *\/$/;"	v	file:
+loBit	trunk/mt-rand.c	73;"	d	file:
+loBits	trunk/mt-rand.c	74;"	d	file:
+main	trunk/mt-rand.c	/^int main(void)$/;"	f
+mixBits	trunk/mt-rand.c	75;"	d	file:
+next	trunk/mt-rand.c	/^static uint32   *next;       \/* next random value is computed from here *\/$/;"	v	file:
+randomMT	trunk/mt-rand.c	/^uint32 randomMT(void)$/;"	f
+reloadMT	trunk/mt-rand.c	/^uint32 reloadMT(void)$/;"	f
+seedMT	trunk/mt-rand.c	/^void seedMT(uint32 seed)$/;"	f
+state	trunk/mt-rand.c	/^static uint32   state[N+1];  \/* state vector + 1 extra to not violate ANSI C *\/$/;"	v	file:
+INLINE	trunk/mt-rand.h	11;"	d
+INLINE	trunk/mt-rand.h	9;"	d
+uint32	trunk/mt-rand.h	/^typedef unsigned long uint32;$/;"	t
+InitializeRobot	trunk/slam.cpp	/^int InitializeRobot(int argc, char *argv[]) {$/;"	f
+MAP_PATH_NAME	trunk/slam.cpp	38;"	d	file:
+PARTICLES_PATH_NAME	trunk/slam.cpp	39;"	d	file:
+PLAYBACK_COMPLETE	trunk/slam.cpp	/^int PLAYBACK_COMPLETE = 0;$/;"	v
+RotationSpeed	trunk/slam.cpp	/^double RotationSpeed, TranslationSpeed;$/;"	v
+SEED	trunk/slam.cpp	34;"	d	file:
+Slam	trunk/slam.cpp	/^void *Slam(void *a)$/;"	f
+TranslationSpeed	trunk/slam.cpp	/^double RotationSpeed, TranslationSpeed;$/;"	v
+VIDEO	trunk/slam.cpp	/^int VIDEO = 10;$/;"	v
+WriteLog	trunk/slam.cpp	/^void WriteLog(FILE *logFile, TSense sense) $/;"	f
+continueSlam	trunk/slam.cpp	/^int continueSlam;$/;"	v
+main	trunk/slam.cpp	/^int main (int argc, char *argv[])$/;"	f

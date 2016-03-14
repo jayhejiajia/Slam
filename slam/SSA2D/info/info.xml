@@ -1,0 +1,81 @@
+<?xml version='1.0'?>
+
+<project>
+  <name>SSA: Sparse Surface Adjustment 2D</name>
+
+  <author>
+    <name>Michael Ruhnke</name>
+    <url>http://www.informatik.uni-freiburg.de/~ruhnke</url>
+  </author>
+  <author>
+    <name>Rainer Kuemmerle</name>
+    <url>http://www.informatik.uni-freiburg.de/~kuemmerl</url>
+  </author>
+  <author>
+    <name>Giorgio Grisetti</name>
+    <url>http://www.informatik.uni-freiburg.de/~grisetti</url>
+  </author>
+  <author>
+    <name>Wolfram Burgard</name>
+    <url>http://www.informatik.uni-freiburg.de/~burgard/</url>
+  </author>
+
+  <briefdescription>
+    SSA is an open-source C++ tool for post optimization of graph-based 2D SLAM
+    solutions. SSA iteratively refines robot poses and 2D surface points in one 
+    global graph optimization system and produces highly accurate 2D laser maps.
+    Laser scans are not treated as rigid body and might be refined during the
+    optimization procedure. This leads to substantially less accumulated noise 
+    in the resulting map. SSA uses g2o as optimization back-end. 
+  </briefdescription>
+  
+  <description>
+    The goal of Sparse Surface Adjustment 2D is to learn highly accurate 
+    laser-based maps. Therefore it treats the overall mapping problem as a joint 
+    optimization problem over robot poses and laser points. 
+    Under the assumption that a laser range finder measures points sampled 
+    from a regular surface this algorithm utilize an improved likelihood 
+    function that accounts for two phenomena affecting the laser measurements 
+    that are often neglected: the conic shape of the laser beam and the 
+    incidence angle of a beam on the underlying surface. A maximum likelihood
+    configuration of all robot poses and all points is computed with g2o.
+    Since the data association is hard to solve on points only, SSA iteratively 
+    updates the data association and local surface characteristics.
+    
+    Sample datasets can be downloaded at:
+    http://www.informatik.uni-freiburg.de/~ruhnke/
+  </description>
+
+  <requirement>
+    Developed under Linux (GCC). Tested under Linux.
+    CMake is needed for building. Uses SuiteSparse if available, requires Qt4
+    and libQGLViewer for the GUI. Furthermore libkdtree++ is needed.
+    Includes a copy of g2o.
+  </requirement>
+
+  <map>Graphs (nodes and edge)</map>
+
+  <input>
+    Nodes and edges of a graph.
+  </input>
+
+  <logformat>
+    A set of simple text messages to represent nodes and edges of the graph.
+    Note that examples files are in the repository. See folder data.
+  </logformat>
+
+  <paper>
+    <title>Highly Accurate Maximum Likelihood Laser Mapping by Jointly Optimizing Laser Points and Robot Poses</title>
+    <authorlist>Michael Ruhnke, Rainer Kuemmerle, Giorgio Grisetti and Wolfram Burgard</authorlist>
+    <publishedin>IEEE International Conference on Robotics and Automation (ICRA)</publishedin>
+    <year>2011</year>
+    <url>http://ais.informatik.uni-freiburg.de/publications/papers/ruhnke11icra.pdf</url>
+  </paper>
+
+  <license>ssa is licenced under LGPL v3</license>
+
+  <furthermore>
+    C++ code, well-coded, compact, efficient.
+  </furthermore>
+
+</project>
